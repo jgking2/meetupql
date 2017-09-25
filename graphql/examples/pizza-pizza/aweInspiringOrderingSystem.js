@@ -32,7 +32,8 @@ class AweInspiringOrderingSystem {
                 name : 'Pepperonipalooze!!',
                 description: 'Pepperoni cooked in pepperoni, on top of another layer of pepperoni - finally finished with pepperoni, and a sprinkly of parmesan',
                 crust: { id: '1', name : 'Thin' },
-                price : 7.99                
+                price : 7.99,
+                imageUrl : 'https://c2.staticflickr.com/4/3355/3275440764_5b516c9f37.jpg'
             }]);
         });
     }
