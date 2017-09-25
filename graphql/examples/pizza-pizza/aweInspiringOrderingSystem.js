@@ -97,9 +97,11 @@ class AweInspiringOrderingSystem {
         return new Promise((resolve, reject) => {
             const currentOrder = orders[orderId];
             //Enable for validation.
-            if(!currentOrder) {
-                reject("No current order, please order a Pepperoni pizza, and then check the order");
-            }
+            //Screwed up the hosted demo - since it's in memory, it fails randomly.
+            //If working local - check it out to see how the error effects it.
+            // if(!currentOrder) {
+            //     reject("No current order, please order a Pepperoni pizza, and then check the order");
+            // }
             const randomIndex = Math.round(Math.random() * (statuses.length - 1))
             const status = statuses[randomIndex];
             const order = Object.assign({}, currentOrder, { status });
