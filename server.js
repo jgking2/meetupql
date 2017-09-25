@@ -65,7 +65,8 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 app.get('/resources', (req, res) => {
-    res.sendFile('index.html');
+    const path = `${__dirname}/index.html`;
+    res.sendFile(path);
 });
 
 app.listen(8080);
