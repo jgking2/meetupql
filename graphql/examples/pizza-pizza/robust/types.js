@@ -160,6 +160,8 @@ const pizzaType = new GraphQLObjectType({
     description : 'Greatest food known to man, here is the makeup.',
     fields: {
         name : fieldHelper(GraphQLString, "name"),
+        description : fieldHelper(GraphQLString, "description"),
+        price : fieldHelper(GraphQLString, "price"),
         toppings : fieldHelper(new GraphQLList(new GraphQLNonNull(toppingType)), "toppings"),
         extraCheese : fieldHelper(GraphQLBoolean, "extraCheese"),
         crust: fieldHelper(crustType, "crust"),

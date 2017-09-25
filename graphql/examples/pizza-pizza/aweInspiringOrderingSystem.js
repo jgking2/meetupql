@@ -30,10 +30,11 @@ class AweInspiringOrderingSystem {
         return new Promise((resolve, reject) => {
             resolve([{
                 name : 'Pepperonipalooze!!',
+                description: 'Pepperoni cooked in pepperoni, on top of another layer of pepperoni - finally finished with pepperoni, and a sprinkly of parmesan',
                 crust: { id: '1', name : 'Thin' },
                 price : 7.99                
             }]);
-        });        
+        });
     }
     /**
      * 
@@ -95,9 +96,9 @@ class AweInspiringOrderingSystem {
         return new Promise((resolve, reject) => {
             const currentOrder = orders[orderId];
             //Enable for validation.
-            // if(!currentOrder) {
-            //     reject("No current order, please order a Pepperoni pizza, and then check the order");
-            // }
+            if(!currentOrder) {
+                reject("No current order, please order a Pepperoni pizza, and then check the order");
+            }
             const randomIndex = Math.round(Math.random() * (statuses.length - 1))
             const status = statuses[randomIndex];
             const order = Object.assign({}, currentOrder, { status });
