@@ -29,8 +29,8 @@ class AweInspiringOrderingSystem {
         //TODO - move this to data.
         return new Promise((resolve, reject) => {
             resolve([{
-                name : 'Pepperonipalooze!!',
-                description: 'Pepperoni cooked in pepperoni, on top of another layer of pepperoni - finally finished with pepperoni, and a sprinkly of parmesan',
+                name : 'Pepperonipalooza',
+                description: 'Pepperoni cooked in pepperoni, on top of another layer of pepperoni - finally finished with pepperoni, and a sprinkle of parmesan',
                 crust: { id: '1', name : 'Thin' },
                 price : 7.99,
                 imageUrl : 'https://c2.staticflickr.com/4/3355/3275440764_5b516c9f37.jpg'
