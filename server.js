@@ -64,4 +64,8 @@ app.use('/graphql', graphqlHTTP({
     graphiql : true
 }));
 
-app.listen(8080, '0.0.0.0');
+app.get('/resources', (req, res) => {
+    res.sendFile('index.html');
+});
+
+app.listen(8080);

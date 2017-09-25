@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+        <title>MeetupQL</title>
+    </head>
+    <body>
+        <h1>Meetup Resources</h1>
+
+        <h3>Presentation links</h3>
+        <ul>
+            <li>
+                <a href="http://meetupql.appspot.com/helloql?query=%23%20Welcome%20to%20GraphiQL%0A%23%0A%23%20GraphiQL%20is%20an%20in-browser%20tool%20for%20writing%2C%20validating%2C%20and%0A%23%20testing%20GraphQL%20queries.%0A%23%0A%23%20Type%20queries%20into%20this%20side%20of%20the%20screen%2C%20and%20you%20will%20see%20intelligent%0A%23%20typeaheads%20aware%20of%20the%20current%20GraphQL%20type%20schema%20and%20live%20syntax%20and%0A%23%20validation%20errors%20highlighted%20within%20the%20text.%0A%23%0A%23%20GraphQL%20queries%20typically%20start%20with%20a%20%22%7B%22%20character.%20Lines%20that%20starts%0A%23%20with%20a%20%23%20are%20ignored.%0A%23%0A%23%20An%20example%20GraphQL%20query%20might%20look%20like%3A%0A%23%0A%23%20%20%20%20%20%7B%0A%23%20%20%20%20%20%20%20field(arg%3A%20%22value%22)%20%7B%0A%23%20%20%20%20%20%20%20%20%20subField%0A%23%20%20%20%20%20%20%20%7D%0A%23%20%20%20%20%20%7D%0A%23%0A%23%20Keyboard%20shortcuts%3A%0A%23%0A%23%20%20%20%20%20%20%20Run%20Query%3A%20%20Ctrl-Enter%20(or%20press%20the%20play%20button%20above)%0A%23%0A%23%20%20%20Auto%20Complete%3A%20%20Ctrl-Space%20(or%20just%20start%20typing)%0A%23%0A%0Aquery%20%7B%0A%20%20hello%2C%0A%20%20parrot(input%3A%221234...5!!%22)%0A%7D%0A%0A%0A">
+                    Hello GraphQl
+                </a>
+            </li>
+            <li>
+                <a href="https://meetupql.appspot.com/eightball?query=%23%20Welcome%20to%20GraphiQL%0A%23%0A%23%20GraphiQL%20is%20an%20in-browser%20tool%20for%20writing%2C%20validating%2C%20and%0A%23%20testing%20GraphQL%20queries.%0A%23%0A%23%20Type%20queries%20into%20this%20side%20of%20the%20screen%2C%20and%20you%20will%20see%20intelligent%0A%23%20typeaheads%20aware%20of%20the%20current%20GraphQL%20type%20schema%20and%20live%20syntax%20and%0A%23%20validation%20errors%20highlighted%20within%20the%20text.%0A%23%0A%23%20GraphQL%20queries%20typically%20start%20with%20a%20%22%7B%22%20character.%20Lines%20that%20starts%0A%23%20with%20a%20%23%20are%20ignored.%0A%23%0A%23%20An%20example%20GraphQL%20query%20might%20look%20like%3A%0A%23%0A%23%20%20%20%20%20%7B%0A%23%20%20%20%20%20%20%20field(arg%3A%20%22value%22)%20%7B%0A%23%20%20%20%20%20%20%20%20%20subField%0A%23%20%20%20%20%20%20%20%7D%0A%23%20%20%20%20%20%7D%0A%23%0A%23%20Keyboard%20shortcuts%3A%0A%23%0A%23%20%20%20%20%20%20%20Run%20Query%3A%20%20Ctrl-Enter%20(or%20press%20the%20play%20button%20above)%0A%23%0A%23%20%20%20Auto%20Complete%3A%20%20Ctrl-Space%20(or%20just%20start%20typing)%0A%23%0A%0A%23%20query%20%7B%0A%23%20%20%20mutants%20%7B%0A%23%20%20%20%20%20name%0A%23%20%20%20%7D%0A%23%20%7D%0Aquery%20%7B%0A%20%20magicEightBall(question%3A%20%22what%22)%20%7B%0A%20%20%20%20value%0A%20%20%20%20certainty%0A%20%20%7D%2C%0A%20%20error%20%7B%0A%20%20%20%20badApple%7B%0A%20%20%20%20%20%20exists%0A%20%20%20%20%20%20missing%0A%20%20%20%20%7D%0A%20%20%20%20goodApple%20%7B%0A%20%20%20%20%20%20exists%0A%20%20%20%20%20%20missing%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0A%0A">
+                    Validation / Error example
+                </a>
+            </li>
+            <li>
+                <a href="https://meetupql.appspot.com/simple?query=query%20CheckOrder(%24orderId%3A%20ID)%20%7B%0A%20%20getStatus%3A%20checkOrder(orderId%3A%20%24orderId)%20%7B%0A%20%20%20%20status%0A%20%20%7D%0A%7D%0A%0Amutation%20OrderPizzaGreatness(%24order%3A%20OrderInput)%20%7B%0A%20%20placeOrder(order%3A%20%24order)%20%7B%0A%20%20%20%20id%0A%20%20%20%20pizza%20%7B%0A%20%20%20%20%20%20toppings%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20sauce%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20crust%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0Aquery%20GetPizzaData(%24showDetail%3A%20Boolean%20%3D%20true)%20%7B%0A%20%20availableToppings%20%7B%0A%20%20%20%20...pizzaPartFragment%0A%20%20%20%20price%20%40include(if%3A%20%24showDetail)%0A%20%20%7D%0A%20%20availableCrusts%20%7B%0A%20%20%20%20...pizzaPartFragment%20%40include(if%3A%20%24showDetail)%0A%20%20%20%20price%20%40include(if%3A%20%24showDetail)%0A%20%20%7D%0A%20%20availableSauce%20%7B%0A%20%20%20%20...pizzaPartFragment%0A%20%20%7D%0A%20%20specialtyPizzas%20%7B%0A%20%20%20%20name%0A%20%20%20%20toppings%20%7B%0A%20%20%20%20%20%20...pizzaPartFragment%0A%20%20%20%20%7D%0A%20%20%20%20sauce%20%7B%0A%20%20%20%20%20%20...pizzaPartFragment%0A%20%20%20%20%7D%0A%20%20%20%20crust%20%7B%0A%20%20%20%20%20%20...pizzaPartFragment%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0Afragment%20pizzaPartFragment%20on%20PizzaPart%20%7B%0A%20%20name%0A%20%20id%0A%7D%0A&operationName=CheckOrder&variables=%7B%0A%20%20%22orderId%22%3A%20%22317%22%2C%0A%20%20%22order%22%3A%20%7B%0A%20%20%20%20%22pizzas%22%3A%20%5B%7B%0A%20%20%20%20%09%22toppings%22%3A%20%5B%221%22%5D%2C%0A%09%09%09%22specialInstructions%22%3A%20%22Replace%20everything%20with%20pepperoni%2C%20thanks!%22%2C%0A%20%20%20%20%20%20%22crust%22%3A%20%221%22%2C%0A%20%20%20%20%20%20%22sauce%22%3A%20%221%22%2C%0A%20%20%20%20%20%20%22extraCheese%22%3A%20true%0A%20%20%20%20%7D%5D%2C%0A%20%20%20%20%22price%22%3A%2012.99%0A%20%20%7D%2C%0A%20%20%22showDetail%22%3A%20false%0A%7D">
+                    Pizza Pizza Example
+                </a>
+            </li>
+            <li>
+                <a href="https://meetupql.appspot.com/graphql?query=%23%20Welcome%20to%20GraphiQL%0A%23%0A%23%20GraphiQL%20is%20an%20in-browser%20tool%20for%20writing%2C%20validating%2C%20and%0A%23%20testing%20GraphQL%20queries.%0A%23%0A%23%20Type%20queries%20into%20this%20side%20of%20the%20screen%2C%20and%20you%20will%20see%20intelligent%0A%23%20typeaheads%20aware%20of%20the%20current%20GraphQL%20type%20schema%20and%20live%20syntax%20and%0A%23%20validation%20errors%20highlighted%20within%20the%20text.%0A%23%0A%23%20GraphQL%20queries%20typically%20start%20with%20a%20%22%7B%22%20character.%20Lines%20that%20starts%0A%23%20with%20a%20%23%20are%20ignored.%0A%23%0A%23%20An%20example%20GraphQL%20query%20might%20look%20like%3A%0A%23%0A%23%20%20%20%20%20%7B%0A%23%20%20%20%20%20%20%20field(arg%3A%20%22value%22)%20%7B%0A%23%20%20%20%20%20%20%20%20%20subField%0A%23%20%20%20%20%20%20%20%7D%0A%23%20%20%20%20%20%7D%0A%23%0A%23%20Keyboard%20shortcuts%3A%0A%23%0A%23%20%20%20%20%20%20%20Run%20Query%3A%20%20Ctrl-Enter%20(or%20press%20the%20play%20button%20above)%0A%23%0A%23%20%20%20Auto%20Complete%3A%20%20Ctrl-Space%20(or%20just%20start%20typing)%0A%23%0A%0Aquery%20SchemaDemo%20%7B%0A%09parts%20%3A%20__type(name%3A%20%22PartType%22)%20%7B%0A%20%20%20%20values%20%3A%20enumValues%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%2C%0A%20%20statuses%20%3A__type(name%3A%22Status%22)%20%7B%0A%20%20%20%20values%20%3A%20enumValues%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&operationName=SchemaDemo&variables=%7B%0A%20%20%22order%22%3A%20%7B%0A%20%20%20%20%22pizzas%22%3A%20%5B%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22toppings%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22id%22%3A%20%221%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22extra%22%3A%20false%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%22crust%22%3A%20%221%22%2C%0A%20%20%20%20%20%20%20%20%22specialInstructions%22%3A%20%22Cut%20into%20stars%20please%22%2C%0A%20%20%20%20%20%20%20%20%22sauce%22%3A%20%221%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22price%22%3A%209.99%0A%20%20%7D%2C%0A%20%20%22partType%22%3A%20%22CRUST%22%2C%0A%20%20%22short%22%3A%20false%0A%7D">
+                    Introspection Example
+                </a>
+            </li>
+            <li>
+                <a href="https://meetupql.appspot.com/graphql?query=%23%20Welcome%20to%20GraphiQL%0A%23%0A%23%20GraphiQL%20is%20an%20in-browser%20tool%20for%20writing%2C%20validating%2C%20and%0A%23%20testing%20GraphQL%20queries.%0A%23%0A%23%20Type%20queries%20into%20this%20side%20of%20the%20screen%2C%20and%20you%20will%20see%20intelligent%0A%23%20typeaheads%20aware%20of%20the%20current%20GraphQL%20type%20schema%20and%20live%20syntax%20and%0A%23%20validation%20errors%20highlighted%20within%20the%20text.%0A%23%0A%23%20GraphQL%20queries%20typically%20start%20with%20a%20%22%7B%22%20character.%20Lines%20that%20starts%0A%23%20with%20a%20%23%20are%20ignored.%0A%23%0A%23%20An%20example%20GraphQL%20query%20might%20look%20like%3A%0A%23%0A%23%20%20%20%20%20%7B%0A%23%20%20%20%20%20%20%20field(arg%3A%20%22value%22)%20%7B%0A%23%20%20%20%20%20%20%20%20%20subField%0A%23%20%20%20%20%20%20%20%7D%0A%23%20%20%20%20%20%7D%0A%23%0A%23%20Keyboard%20shortcuts%3A%0A%23%0A%23%20%20%20%20%20%20%20Run%20Query%3A%20%20Ctrl-Enter%20(or%20press%20the%20play%20button%20above)%0A%23%0A%23%20%20%20Auto%20Complete%3A%20%20Ctrl-Space%20(or%20just%20start%20typing)%0A%23%0A%0Amutation%20PizzaMutation(%0A%20%20%24order%20%3A%20OrderInput%0A)%20%7B%0A%20%20placeOrder(order%3A%20%24order)%20%7B%0A%20%20%20%20id%2C%0A%20%20%20%20pizzas%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20extraCheese%0A%20%20%20%20%20%20toppings%20%7B%0A%20%20%20%20%20%20%20%20name%2C%0A%20%20%20%20%20%20%20%20description%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%2C%0A%20%20%09status%0A%20%20%7D%0A%7D%0A%0Aquery%20CheckOrder%20%7B%0A%20%20checkOrder(orderId%3A%22859%22)%20%7B%0A%20%20%20%20pizzas%20%7B%0A%20%20%20%20%20%20toppings%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20extraCheese%0A%20%20%20%20%20%20size%0A%20%20%20%20%7D%2C%0A%20%20%20%20status%0A%20%20%7D%0A%7D%0A%0A%23%20%7B%20%22partType%22%20%3A%20%22CRUST%22%2C%20%22short%22%3A%20true%20%7D%0Aquery%20PizzaQuery(%0A%20%20%24partType%20%3A%20PartType%2C%20%0A%20%20%24short%20%3A%20Boolean%20%3D%20false)%20%7B%0A%20%20pizzaPart%20%3A%20getPizzaPartOptions(partType%20%3A%20%24partType)%20%7B%0A%20%20%20%20...pizzaPartFragment%0A%20%20%20%20...toppingsFragment%20%0A%20%20%20%20...crustsFragment%20%40skip(if%3A%24short)%0A%20%20%7D%2C%0A%20%20specialtyPizzas%20%7B%0A%20%20%20%20name%0A%20%20%7D%0A%20%20getToppingsByCategory(category%3AVEGETABLE)%20%7B%0A%20%20%20%20id%0A%20%20%7D%0A%7D%0A%0Afragment%20pizzaPartFragment%20on%20PizzaPart%20%7B%0A%20%20id%0A%20%20name%0A%20%20description%20%40skip(if%3A%24short)%0A%7D%0A%0Afragment%20toppingsFragment%20on%20Topping%20%7B%0A%20%20price%0A%7D%0A%0Afragment%20crustsFragment%20on%20Crust%20%7B%0A%20%20additionalCost%0A%7D%0A&operationName=PizzaQuery&variables=%7B%0A%20%20%22order%22%3A%20%7B%0A%20%20%20%20%22pizzas%22%3A%20%5B%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22toppings%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22id%22%3A%20%221%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22extra%22%3A%20false%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%22crust%22%3A%20%221%22%2C%0A%20%20%20%20%20%20%20%20%22specialInstructions%22%3A%20%22Cut%20into%20stars%20please%22%2C%0A%20%20%20%20%20%20%20%20%22sauce%22%3A%20%221%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22price%22%3A%209.99%0A%20%20%7D%2C%0A%20%20%22partType%22%3A%20%22CRUST%22%2C%0A%20%20%22short%22%3A%20false%0A%7D">Full-ish demo</a>
+            </li>
+            <li>
+                <a href="https://expo.io/@jgkingii/meetupql">
+                    Expo link (The graphQl app demo)
+                </a>
+            </li>
+        </ul>
+        <h3>Source code</h3>
+        <ul>
+            <li>                
+                <a href="https://github.com/jgking2/meetupql-app">
+                    App source code
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/jgking2/meetupql">
+                    Service source code
+                </a>
+            </li>                        
+        </ul> 
+        <h3>References</h3>
+        <ul>
+            <li>
+                <a href="https://facebook.github.io/graphql/">
+                    GraphQl Specification.
+                </a>
+            </li>
+            <li>
+                <a href="http://graphql.org/">
+                    http://graphql.org/
+                </a>
+            </li>
+        </ul>
+    </body>
+</html>
